@@ -9,9 +9,4 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   port: 3306
 });
 
-// turn on connection to database and server
-sequelize.sync({ force: true }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
-
 module.exports = sequelize;
